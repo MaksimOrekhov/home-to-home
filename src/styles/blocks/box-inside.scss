@@ -1,0 +1,151 @@
+@import '../global/variables.scss';
+
+.box-inside {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.box-inside__content {
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 325px;
+  padding: 25px 0;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+}
+
+.box-inside__title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: $fontsize-title--big;
+  line-height: $lineheight-title--big;
+  font-weight: 300;
+  color: $color-blue;
+}
+
+.box-inside__subtitle {
+  font-size: $fontsize-base;
+  line-height: $lineheight-base;
+  color: $color-txt-lightgrey;
+}
+
+.box-inside__header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.box-inside__list {
+  padding-left: 35px;
+  padding-right: 35px;
+  list-style: none;
+}
+
+.box-inside__list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+  font-size: $fontsize-base;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    color: #6E6E6E;
+  }
+}
+
+.box-inside__close-item {
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.box-inside__close-window {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  opacity: 0.7;
+  cursor: pointer;
+  fill: $color-txt-lightgrey;
+
+  &:hover {
+    fill: #F64740;
+    opacity: 1;
+  }
+}
+
+.box-inside__add-block {
+  display: flex;
+  margin-top: 70px;
+  padding: 30px 35px 10px 35px;
+  border-top: 1px solid #EDEDED;
+
+  &:hover .box-inside__add-icon {
+    opacity: 1;
+  }
+}
+
+.box-inside__add-icon {
+  opacity:0.5;
+  cursor: pointer;
+}
+
+.box-inside__input {
+  width: 100%;
+  outline: none;
+  margin-right: 25px;
+  border: none;
+  font-size: $fontsize-base;
+
+  &::placeholder {
+    color: $color-txt-lightgrey;
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.add__item {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+
+@media #{$tablet-widths} {
+  .box-inside__content {
+    width: 480px;
+  }
+
+  .box-inside__list-item {
+    font-size: $fontsize-title;
+  }
+
+}
+
+.popup-inside__close-block {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 35px 10px 35px;
+}
+
+.close__button {
+  color: $color-txt-lightgrey;  
+  font-size: 24px;
+  &:hover {
+    color: #6E6E6E;
+  }
+}

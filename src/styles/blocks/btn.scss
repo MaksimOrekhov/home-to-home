@@ -1,0 +1,27 @@
+@import '../global/variables.scss';
+@import '../global/mixins.scss';
+
+
+.btn {
+  display: block;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  font-size: $fontsize-base;
+  line-height: $lineheight-base;
+  font-weight: 400;
+  border: none;
+  border-radius: $border-radius;
+  color: #ffffff;
+  background-color: $color-blue;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color-blue, 10%);
+  }
+}

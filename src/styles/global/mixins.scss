@@ -1,0 +1,13 @@
+@mixin container {
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  @media #{$tablet-widths} {
+    max-width: 780px;
+  }
+
+  @media #{$desktop-widths} {
+    max-width: 980px;
+  }
+}
